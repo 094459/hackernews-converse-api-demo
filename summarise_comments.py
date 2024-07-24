@@ -7,8 +7,8 @@ with open('comments.txt', 'r') as file:
     file_contents = file.read()
 
 # Create a Bedrock client
-session = boto3.Session(region_name='us-east-1')
-bedrock = boto3.client('bedrock-runtime')
+
+bedrock = boto3.client('bedrock-runtime', region_name='us-east-1')
 
 # Define the model ID
 model_id = 'anthropic.claude-3-sonnet-20240229-v1:0'
